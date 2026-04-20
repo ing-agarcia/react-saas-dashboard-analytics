@@ -1,24 +1,38 @@
 # React SaaS Dashboard Analytics
 
+![Dashboard](./screenshots/Dashboard.png)
+
 A modern SaaS dashboard built with React, featuring user management, hierarchical structures, and data-driven forecasting.
 
-> Includes a backend-powered forecasting module built with FastAPI and Linear Regression.
+> Includes a forecasting microservice powered by FastAPI (Python) using Linear Regression.
 
 ## 🚀 Features
 
 - User Management (CRUD)
 - Hierarchical User Structure (Manager relationships)
-- Data-driven Forecast Analytics (FastAPI + Linear Regression)
+- Data-driven Forecast Analytics (FastAPI microservice)
 - Reusable Components (DataTable, Modals, Charts)
 - Modern UI with Tailwind CSS
-- API Integration (Node.js / Spring Boot compatible)
+- Multi-backend integration (Java, Node.js, FastAPI)
 
 ## 🧠 Key Highlights
 
 - Clean architecture with separated layers (features, services, components)
-- Scalable component design
-- Backend-agnostic (works with different APIs)
+- Scalable and reusable component design
+- Multi-backend architecture (Java + Node.js + Python)
+- Integration with a forecasting microservice
 - Focus on real-world SaaS patterns
+
+## 🏗️ Architecture
+
+- Frontend: React + Tailwind CSS
+- Backend Services:
+  - Java (Spring Boot) → core business logic
+  - Node.js → API services / integrations
+- ML Service:
+  - FastAPI (Python) → Forecasting via Linear Regression
+- Communication:
+  - REST APIs between services
 
 ## 🛠️ Tech Stack
 
@@ -30,14 +44,13 @@ A modern SaaS dashboard built with React, featuring user management, hierarchica
 
 ## 📸 Screenshots
 
-### Dashboard Analytics
-![Dashboard](./screenshots/Dashboard.png)
-
 ### Forecast Analytics
+> Data-driven forecasting powered by a FastAPI microservice
+
 ![Forecast](./screenshots/Forecast.png)
 
 ### User Management
-![Users](./screenshots//Users.png)
+![Users](./screenshots/Users.png)
 
 ### User Modal
-![Modal](./screenshots//Modal.png)
+![Modal](./screenshots/Modal.png)
