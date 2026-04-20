@@ -37,7 +37,7 @@ A modern SaaS dashboard built with React, featuring user management, hierarchica
 ![Forecast](./screenshots/Forecast.png)
 
 ### User Management
-![Users](./screenshots/users.png)
+![Users](./screenshots//Users.png)
 
 ### User Modal
-![Modal](./screenshots/modal.png)
+![Modal](./screenshots//Modal.png)
