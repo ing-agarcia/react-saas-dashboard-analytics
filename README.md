@@ -2,9 +2,16 @@
 
 ![Dashboard](./screenshots/Dashboard.png)
 
-A modern SaaS dashboard built with React, featuring user management, hierarchical structures, and data-driven forecasting.
+A modern SaaS dashboard built with React that integrates multiple backend services and a forecasting microservice.
 
-> Includes a forecasting microservice powered by FastAPI (Python) using Linear Regression.
+## 🎯 Project Purpose
+
+This project simulates a real-world SaaS environment where multiple backend services interact with a unified frontend.
+
+It demonstrates:
+- Integration of heterogeneous backends (Java, Node.js)
+- Use of a Python microservice for data-driven forecasting
+- Scalable frontend architecture for analytics dashboards
 
 ## 🚀 Features
 
