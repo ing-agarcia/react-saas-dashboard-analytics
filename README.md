@@ -45,8 +45,9 @@ Both backends provide the same business capabilities, allowing the frontend to r
                     ↓
     ┌───────────────┼───────────────┐ 
     ↓                               ↓
-Node.js API                 Spring Boot API 
-(TypeScript)                (Java)
+  Node.js API                  Spring Boot API
+    ↓                               ↓
+  (TypeScript)                 (Java)
                     ↓
                 Database
                     ↘
@@ -77,6 +78,7 @@ Data-driven predictions powered by FastAPI
 
 👥 User Management
 Manage users, roles, and hierarchy
+
 ![Users](./screenshots/Users.png)
 
 🧾 User Modal
