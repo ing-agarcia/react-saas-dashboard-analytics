@@ -13,14 +13,23 @@ It demonstrates:
 - Use of a Python microservice for data-driven forecasting
 - Scalable frontend architecture for analytics dashboards
 
+## 🧠 Multi-Backend Concept
+
+This frontend is designed to work with multiple backend implementations of the same domain:
+
+* Node.js (TypeScript)
+* Java (Spring Boot)
+
+Both backends provide the same business capabilities, allowing the frontend to remain **decoupled and flexible** regardless of the underlying technology.
+
 ## 🚀 Features
 
-- User Management (CRUD)
-- Hierarchical User Structure (Manager relationships)
-- Data-driven Forecast Analytics (FastAPI microservice)
-- Reusable Components (DataTable, Modals, Charts)
-- Modern UI with Tailwind CSS
-- Multi-backend integration (Java, Node.js, FastAPI)
+* Manage users and organizational hierarchy
+* Visualize business performance through dashboards
+* Analyze pipeline stages and trends
+* Predict future metrics using machine learning
+* Seamless integration with multiple backend systems
+* Reusable and scalable UI components
 
 ## 🧠 Key Highlights
 
@@ -32,14 +41,16 @@ It demonstrates:
 
 ## 🏗️ Architecture
 
-- Frontend: React + Tailwind CSS
-- Backend Services:
-  - Java (Spring Boot) → core business logic
-  - Node.js → API services / integrations
-- ML Service:
-  - FastAPI (Python) → Forecasting via Linear Regression
-- Communication:
-  - REST APIs between services
+              Frontend (React)
+                    ↓
+    ┌───────────────┼───────────────┐ 
+    ↓                               ↓
+Node.js API                 Spring Boot API 
+(TypeScript)                (Java)
+                    ↓
+                Database
+                    ↘
+                      FastAPI (ML)
 
 ## 🛠️ Tech Stack
 
@@ -54,10 +65,30 @@ It demonstrates:
 ### Forecast Analytics
 > Data-driven forecasting powered by a FastAPI microservice
 
+📊 Sales Dashboard
+Overview of KPIs and business metrics
+
+![Dashboard](./screenshots/Dashboard.png)
+
+📈 Forecast Analytics
+Data-driven predictions powered by FastAPI
+
 ![Forecast](./screenshots/Forecast.png)
 
-### User Management
+👥 User Management
+Manage users, roles, and hierarchy
 ![Users](./screenshots/Users.png)
 
-### User Modal
+🧾 User Modal
+Create and update users with validation
+
 ![Modal](./screenshots/Modal.png)
+
+## 🧠 Key Takeaway
+
+This project demonstrates how to build a modern frontend application that:
+
+Integrates multiple backend technologies
+Remains decoupled from implementation details
+Supports analytics and machine learning workflows
+Follows scalable and maintainable design principles
