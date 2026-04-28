@@ -55,7 +55,7 @@ export default function UserMenu() {
 
                         <button
                             onClick={logout}
-                            className="flex items-center gap-2 px-4 py-2 w-full text-sm text-[--error] hover:bg-[--bg-btn-hover] transition rounded-lg"
+                            className="flex items-center gap-2 px-4 py-2 w-full text-sm text-[--error] hover:bg-[--bg-btn-hover] transition rounded-lg cursor-pointer"
                         >
                             <LogOut className="w-4 h-4" />
                             Sign out

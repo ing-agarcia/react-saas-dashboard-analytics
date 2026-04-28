@@ -58,7 +58,8 @@ export const ForecastChart = ({ data }: Props) => {
                     strokeDasharray="5 5"
                     strokeWidth={2}
                     dot={{ r: 3 }}
-                    isAnimationActive={false}
+                    animationBegin={1000}
+                    animationDuration={1000}
                     connectNulls
                 />
             </LineChart>

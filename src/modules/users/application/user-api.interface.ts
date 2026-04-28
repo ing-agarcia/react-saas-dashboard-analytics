@@ -7,5 +7,5 @@ export interface IUserApi {
     updateUser(data: UpdateUserDTO): Promise<any>;
     deleteUser(id: number): Promise<any>;
     getManagers(roleId: number): Promise<any>;
-    getReport(page?: number, size?: number): Promise<Blob>;
+    getReport(): Promise<any>;
 }

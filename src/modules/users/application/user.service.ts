@@ -32,16 +32,48 @@ export const createUserService = (api: IUserApi) => ({
         return res;
     },
 
-    async downloadReport(page = 0, size = 50): Promise<void> {
-        const blob = await api.getReport(page, size);
+    async downloadReport(): Promise<void> {
+        const { data, headers } = await api.getReport();
 
+        const contentType = headers["content-type"] || "";
+        const disposition = headers["content-disposition"] || "";
+
+        const isPdf =
+            contentType.includes("pdf") ||
+            disposition.includes(".pdf");
+
+        if (isPdf) {
+            await this.downloadPdf(data);
+        } else {
+            this.downloadExcel(data);
+        }
+    },
+
+    async downloadPdf(blob: Blob): Promise<void> {
         const url = window.URL.createObjectURL(
-            new Blob([blob], { type: "application/pdf" })
+            new Blob([blob], {
+                type: "application/pdf"
+            })
         );
 
         const link = document.createElement("a");
         link.href = url;
         link.download = "users-report.pdf";
+        link.click();
+
+        window.URL.revokeObjectURL(url);
+    },
+
+    async downloadExcel(blob: Blob): Promise<void> {
+        const url = window.URL.createObjectURL(
+            new Blob([blob], {
+                type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            })
+        );
+
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "users-report.xlsx";
         link.click();
 
         window.URL.revokeObjectURL(url);

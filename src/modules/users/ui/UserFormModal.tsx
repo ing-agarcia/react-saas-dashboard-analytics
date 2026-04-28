@@ -131,7 +131,6 @@ export default function UserFormModal({
 
     const fetchManagers = async (roleId: number) => {
         try {
-            console.log(roleId)
             const response = await userService.getManagers(roleId);
             setManagers(response);
         } catch (error: any) {

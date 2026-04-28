@@ -24,7 +24,6 @@ export default function UsersPage() {
 
     // Form loading state
     const [loading, setLoading] = useState(false);
-    const [currentPage, setCurrentPage] = useState(0);
 
     const { user } = useAuth();
     const isRoot = user?.role === "Root" || user?.role === "ROOT";
@@ -39,7 +38,6 @@ export default function UsersPage() {
     };
 
     const handlePageChange = (newPage: number) => {
-        setCurrentPage(newPage);
         fetchUsers(newPage);
     };
 
@@ -101,7 +99,7 @@ export default function UsersPage() {
 
     const reportUsers = async () => {
         try {
-            await userService.downloadReport(currentPage, 50);
+            await userService.downloadReport();
             showToast("success", "Report generated successfully");
         } catch (error: any) {
             showToast("error", error.response?.data?.message || "The report could not be generated");

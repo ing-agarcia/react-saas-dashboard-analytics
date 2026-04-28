@@ -33,11 +33,14 @@ export const userApi = {
         return res.data;
     },
 
-    async getReport(page = 0, size = 50) {
+    async getReport() {
         const res = await api.get("/users/report", {
-            params: { page, size },
             responseType: "blob"
         });
-        return res.data;
+
+        return {
+            data: res.data,
+            headers: res.headers
+        };
     }
 };
