@@ -41,18 +41,7 @@ Both backends provide the same business capabilities, allowing the frontend to r
 
 ## 🏗️ Architecture
 
-              Frontend (React)
-                    ↓
-    ┌───────────────┼───────────────┐ 
-    ↓                               ↓
-  Node.js API                   Spring Boot API
-    ┌───────────────┼───────────────┐ 
-    ↓                               ↓
-  (TypeScript)                 (Java)
-                    ↓
-                Database
-                    ↘
-                      FastAPI (ML)
+![Architecture](./screenshots/Architecture%20frontend.png) 
 
 ## 🛠️ Tech Stack
 
