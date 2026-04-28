@@ -46,6 +46,7 @@ Both backends provide the same business capabilities, allowing the frontend to r
     ┌───────────────┼───────────────┐ 
     ↓                               ↓
   Node.js API                  Spring Boot API
+    ───────────────┼───────────────── 
     ↓                               ↓
   (TypeScript)                 (Java)
                     ↓
