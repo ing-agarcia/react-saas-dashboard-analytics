@@ -1,3 +1,3 @@
 export interface IForecastApi {
-    getForecast(): Promise<any>;
+    getForecast(model: string): Promise<any>;
 }

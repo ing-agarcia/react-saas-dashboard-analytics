@@ -1,8 +1,13 @@
 import api from "../../../../shared/api/api";
 
 export const forecastApi = {
-    async getForecast() {
-        const res = await api.get("/forecast/trend");
+
+    async getForecast(model: string) {
+        const res = await api.get("/forecast/trend", {
+            params: {
+                model,
+            }
+        });
         return res.data;
     },
 }
